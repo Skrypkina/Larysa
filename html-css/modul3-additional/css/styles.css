@@ -1,0 +1,96 @@
+/* Задание 1 */
+
+body {
+    font-family: Playfair Display, serif;
+    color: #777777;
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 100vh;
+}
+
+.menu {
+    list-style-type: none;
+    text-align: center;
+    line-height: 20px;
+}
+
+.menu-item a {
+    text-decoration-line: none;
+    font-size: 20px;
+    color: blueviolet;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: brown;
+}
+
+/* Задание 2 */
+
+.wrapper {
+    width: 470px;
+    margin: 0 auto;
+    text-align: center;
+    border-style: solid;
+    border-color: rgba(98, 98, 98, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.image {
+    margin-top: 30px;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+/* Задание 3 */
+
+.conteiner {
+    width: 960px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: rgba(98, 98, 98, 0.2);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.article {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.article-item {
+    width: 470px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #626262;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: normal;
+    padding-right: 15px;
+    
+     
+}
+p.title {
+    width: 420px;
+    padding-left: 25px;
+    text-align: left;
+}
+p {
+    text-align: left;
+    width: 420px;
+    padding-left: 25px;
+}
+.article-title {
+    padding-right: 39px;
+}
