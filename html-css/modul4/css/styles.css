@@ -18,6 +18,7 @@ html {
     line-height: 26px;
     width: 1170px;
     margin: 0 auto;
+   
 }
 
 img {
@@ -79,7 +80,7 @@ header {
     text-transform: uppercase;
     color: #0f0101;
     font-size: 14px;
-    line-height: 17px;
+    line-height: 37px;
 }
 
 .menu-item a:hover,
@@ -90,7 +91,7 @@ header {
 /* section main */
 
 main {
-    margin-bottom: 80px;
+    padding-bottom:  80px;
 }
 
 .products-title {
