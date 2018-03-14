@@ -8,7 +8,7 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.wrapper {
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     color: #555252;
@@ -16,9 +16,6 @@ body {
     padding-left: 30px;
     font-size: 14px;
     line-height: 26px;
-}
-
-.wrapper {
     width: 1170px;
     margin: 0 auto;
 }
@@ -37,7 +34,7 @@ img {
 
 /* Header */
 
-.nav {
+header {
     padding-top: 40px;
     margin-bottom: 106px;
 }
@@ -92,8 +89,8 @@ img {
 
 /* section main */
 
-.products {
-    margin-bottom: 99px;
+main {
+    margin-bottom: 80px;
 }
 
 .products-title {
@@ -106,6 +103,7 @@ img {
     font-weight: 400;
     margin: 0;
     padding: 0;
+    margin-bottom: 80px;
 }
 
 .products-title::after {
@@ -115,7 +113,6 @@ img {
     height: 8px;
     background-color: #1abc9c;
     margin: auto;
-    margin-bottom: 92px;
     margin-top: 27px;
 }
 
@@ -175,8 +172,8 @@ img {
     text-align: center;
 }
 
-.blog {
-    margin-bottom: 80px;
+.products {
+    margin-bottom: 99px;
 }
 
 .blog-list {
@@ -193,6 +190,7 @@ img {
     text-align: center;
     margin: 0;
     padding: 0;
+    margin-bottom: 80px;
 }
 
 .blog-title::after {
@@ -202,8 +200,7 @@ img {
     height: 8px;
     background-color: #4ec6ab;
     margin: auto;
-    margin-bottom: 80px;
-    margin-top: 29px;
+    margin-top: 27px;
 }
 
 .blog-list-item {
@@ -226,6 +223,7 @@ img {
     font-weight: 400;
     margin: 0;
     padding: 0;
+    margin-bottom: 22px;
 }
 
 .blog-list-title span {
@@ -239,7 +237,7 @@ img {
     height: 3px;
     background-color: #4ec6ab;
     margin-top: 12px;
-    margin-bottom: 22px;
+    
 }
 
 p {
@@ -251,7 +249,7 @@ p {
 .blog-link {
     text-decoration-line: none;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 50px;
     display: block;
     width: 160px;
     height: 50px;
@@ -260,7 +258,6 @@ p {
     margin: 0;
     padding: 0;
     text-align: center;
-    padding-top: 14px;
 }
 
 .products-link:hover .title {
@@ -272,8 +269,9 @@ p {
 }
 
 .products-link:focus .title {
-    background-color: #1abc9c;  
+    background-color: #1abc9c;
 }
+
 .products-link:focus .price {
-    background-color: #7fd9c7; 
+    background-color: #7fd9c7;
 }
