@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(122, 188, 255, 0.3) 0%, rgba(96, 171, 248, 0.3) 44%, rgba(64, 150, 238, 0.3) 100%), url('/img/nature.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1170;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    padding-top: 20px;
+    padding-right: 30px;
+    margin-bottom: 100px;
+}
+
+.menu {
+    list-style: none;
+    font-size: 0;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.menu-item-link,
+.submenu-item-link {
+    text-decoration-line: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    color: #ffffff;
+    background-color: #424242;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-item-link:hover,
+.submenu-item-link:hover {
+    color: #ffffff;
+    background: teal;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    background-color: #424242;
+}
+
+.menu-item:hover>.submenu {
+    display: block;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: #424242;
+    margin-left: 30px;
+    position: relative;
+}
+
+.red-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.blue-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.green-box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.peru-box {
+    width: 100px;
+    height: 100px;
+    background-color: peru;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.pink-box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.plum-box {
+    width: 100px;
+    height: 100px;
+    background-color: plum;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%)
+}
+
+.purple-box {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.teal-box {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.tan-box {
+    width: 100px;
+    height: 100px;
+    background-color: tan;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
