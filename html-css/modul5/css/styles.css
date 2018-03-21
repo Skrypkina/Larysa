@@ -97,8 +97,8 @@ header {
 }
 
 .slides-image {
-    min-width: 100vw;
-    min-height: 40vh;
+    min-width: 100%;
+    min-height: 40%;
 }
 
 .slider-ctrl {
@@ -124,13 +124,13 @@ header {
 .slider-ctrl-prev {
     left: 245px;
     color: #ffffff;
-    background-image: url('/img/angle-left.png');
+    background-image: url('../img/angle-left.png');
 }
 
 .slider-ctrl-next {
     right: 245px;
     color: #ffffff;
-    background-image: url('/img/angle-right.png');
+    background-image: url('../img/angle-right.png');
 }
 
 .slides {
