@@ -8,15 +8,13 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    background-color: #e9f0fd;
-}
+
 
 .wrapper {
-    width: 1600px;
+   width: 1600px;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9f0fd;
 }
 
 .clearfix::after {
@@ -33,7 +31,7 @@ img {
 
 /* header */
 
-header {
+.header {
     padding-top: 43px;
     padding-bottom: 37px;
     background-color: #ffffff;
@@ -97,8 +95,8 @@ header {
 }
 
 .slides-image {
-    min-width: 100%;
-    min-height: 40%;
+    max-height: 40%;
+    
 }
 
 .slider-ctrl {
@@ -118,8 +116,6 @@ header {
 .slider:hover .slider-ctrl {
     opacity: 0.8;
 }
-
-
 
 .slider-ctrl-prev {
     left: 245px;
@@ -236,9 +232,8 @@ header {
     text-align: center;
 }
 
-.products-item:hover .item-title,
-    {
-    background-color: #1adc9c;
+.products-item:hover .item-title {
+    background-color: #1abc9c;
 }
 
 .products-item:focus .item-title {
