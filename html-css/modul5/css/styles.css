@@ -94,7 +94,9 @@ img {
     margin-bottom: 96px;
 }
 
-
+.slides-image {
+    min-width: 40%;
+}
 
 .slider-ctrl {
     width: 104px;
