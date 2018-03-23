@@ -9,7 +9,7 @@ html {
 }
 
 .wrapper {
-  min-width: 1600px;
+    width: 1600px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     background-color: #e9f0fd;
