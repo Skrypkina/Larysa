@@ -8,10 +8,8 @@ html {
     box-sizing: inherit;
 }
 
-
-
 .wrapper {
-   width: 1600px;
+  min-width: 1600px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     background-color: #e9f0fd;
@@ -109,11 +107,11 @@ img {
     transform: translateY(-50%);
     font-size: 50px;
     z-index: 10;
-    opacity: 0;
+    opacity: 0.8;
 }
 
 .slider:hover .slider-ctrl {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .slider-ctrl-prev {
@@ -299,11 +297,6 @@ img {
     background-image: url('../img/arrows.png');
 }
 
-.products-item:hover .overlay-link-arrows {
-    background-color: #1abc9c;
-    border: 1px solid transparent;
-}
-
 .products-item:focus .overlay-link-arrows {
     background-color: #1abc9c;
     border: 1px solid transparent;
@@ -332,10 +325,29 @@ img {
     background-color: #323232;
 }
 
+.overlay-link-cart:hover {
+    background-color: #1abc9c;
+    border: 1px solid transparent;
+}
+
+.overlay-link-heart:hover {
+    background-color: #1abc9c;
+    border: 1px solid transparent;
+}
+
+.overlay-link-arrows:hover {
+    background-color: #1abc9c;
+    border: 1px solid transparent;
+}
+
+.overlay-link-clock:hover {
+    background-color: #1abc9c;
+    border: 1px solid transparent;
+}
+
 /* Footer */
 
 .footer {
-    width: 1600px;
     height: 88px;
     background-color: #323232;
     text-align: center;
