@@ -94,6 +94,7 @@ img {
 
 .slides-image {
     min-width: 40%;
+    background-size: cover;
 }
 
 .slider-ctrl {
