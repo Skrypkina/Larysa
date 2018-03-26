@@ -43,7 +43,7 @@ img {
     margin: 0;
     padding: 0;
     float: right;
-    /* margin-right: 245px; */
+    
 }
 
 .menu-item {
@@ -125,20 +125,24 @@ img {
     opacity: 0.8;
 }
 
-.slider:hover .slider-ctrl {
+
+.slider-ctrl:hover {
     opacity: 1;
 }
-
 .slider-ctrl-prev {
-    /* left: 245px; */
+    
     color: #ffffff;
-    background-image: url('../img/angle-left.png');
+    /* background-image: url('../img/angle-left.png'); */
+    
+    
 }
 
 .slider-ctrl-next {
     right: 0;
     color: #ffffff;
-    background-image: url('../img/angle-right.png');
+    /* background-image: url('../img/angle-right.png');
+    */
+    
 }
 
 .slides {
@@ -207,7 +211,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    /* margin-left: 245px; */
+    
     width: 100%;
 }
 
@@ -375,4 +379,7 @@ img {
 
 .footer-color-item {
     color: #46bfa9;
+}
+.products-item-link {
+    display: block;
 }
