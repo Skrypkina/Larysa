@@ -279,14 +279,15 @@ body {
      justify-content: center;   
      position: absolute;
      z-index: 10;
-     top: -10px;
-     left: -10px;
+     
      opacity: 0;
-     transition: opasity 0.2s linear
+     transition: opacity 0.2s linear, transform 0.2s linear;
      
 }
 .team-member:hover .team-overlay-second {
-    opacity: 1;
+    opacity: 1; 
+    transform: translate(-10px, -10px);
+    
 }
 
 /* visually-hidden helper */
