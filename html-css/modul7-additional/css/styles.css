@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.table {
+    margin-bottom: 80px;
+}
+.pricelist {
+  width: 490px;
+  padding: 30px 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0 auto;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 450px;
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    color: #333333;
+    border: 2px solid #333333;
+    margin: 0 auto;
+    
+}
+caption {
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+th {
+text-align: center;
+padding-left: 10px;
+
+font-weight: 700;
+color: #ffffff;
+background-color: #333333;
+}
+
+td {
+    text-transform: uppercase;
+    border: 2px solid #333333;
+    padding-left: 10px;
+}    
+
+.google-map {
+   width: 520px;
+   margin: auto;
+   padding: 10px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+
+}
