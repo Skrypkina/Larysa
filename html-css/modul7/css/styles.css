@@ -7,11 +7,11 @@ html {
 *::after {
     box-sizing: inherit;
 }
-
+/* 
 .conteiner {
     width: 1400px;
     margin: auto;
-}
+} */
 
 /* montserrat-regular - cyrillic_latin */
 @font-face {
@@ -233,7 +233,7 @@ html {
         background-repeat: no-repeat;
         background-position: right;
         padding-bottom: 114px;
-        
+        padding-top: 102px;
     }
 
    .user-form-list input {
