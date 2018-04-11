@@ -1,0 +1,141 @@
+@media (max-width: 747px) {
+    .banner-text  {
+        flex-basis: 250px;
+    text-align: center;
+    }
+    .page-nav {
+        flex-direction: column;
+        margin-bottom: 36px;
+    }
+    
+    .page-logo {
+        order: 3;
+       
+    }
+    .menu {
+        margin-bottom: 130px;
+    }
+    .banner-text-title {
+        margin-bottom: 26px;
+    }
+    .banner-text {
+        margin-bottom: 10px;
+    }
+    .banner {
+        padding-top: 30px;
+    }
+    header {
+        margin-bottom: 70px;
+    }
+    .partners-title {
+        margin-bottom: 20px;
+    }
+    .partners-list-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .partners-list {
+        margin-bottom: 30px;
+    }
+    main {
+        padding-bottom: 56px;
+    }
+}
+@media (min-width: 748px) and (max-width: 939px) {
+    .conteiner {
+        width: 748px;
+    }
+    .banner {
+        min-height: 700px;
+    }
+    .page-nav {
+        width: 660px;
+        justify-content: space-between;
+        margin: auto;
+        padding-top: 50px;
+        margin-bottom: 150px;
+    }
+    .banner-text-title {
+        width: 450px;
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 34px;
+    }
+    .banner-text {
+        width: 404px;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .banner-text-link {
+        width: 230px;
+    }
+    header {
+        margin-bottom: 70px;
+    }
+    .partners-title {
+        margin-bottom: 30px;
+    }
+    .partners-list {
+        display: flex;
+        width: 490px;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .partners-list-item:not(:nth-last-child(-n+2))  {
+     margin-bottom: 60px;
+    }
+    .partners-list-item:nth-child(4) {
+        margin-top: 0;
+    }
+    main {
+        padding-bottom: 40px;
+    }
+}
+ @media (min-width: 940px) {
+
+    .conteiner {
+        width: 940px;
+        
+    }
+    .page-nav {
+        width: 940px;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        padding-top: 30px;
+    }
+    .banner-text-title {
+        width: 450px;
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .banner-text {
+        width: 404px;
+        font-size: 24px;
+        margin-bottom: 30px;
+        
+    }
+    .banner-text-link {
+        width: 230px;
+    }
+    header {
+        margin-bottom: 70px;
+    }
+    .partners-title {
+        margin-bottom: 30px;
+    }
+    .partners-list {
+        display: flex;
+    }
+    .lucas {
+        padding-top: 20px;
+    }
+   .partners-list {
+       margin-bottom: 40px;
+   }
+   main {
+       padding-bottom: 72px;
+   }
+ }
+
+ 

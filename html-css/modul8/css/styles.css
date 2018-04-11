@@ -1,0 +1,233 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.conteiner {
+    width: 320px;
+    margin: 0 auto;
+    
+}
+/* header */
+.page-logo {
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #ffffff; 
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+.banner {
+    display: block;
+    min-height: 520px;
+    background-image: linear-gradient(
+        to right,
+        rgba(117, 127, 170, 0.2),
+        rgba(215, 221, 232, 0.2)),
+    
+    url('../img/Vector Smart Object.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    
+}
+.menu-item a {
+    text-decoration: none;
+   
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.banner-text-title {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+    width: 249px;
+    text-align: center;    
+}
+.banner-text {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    width: 249px;
+    
+}
+.page-nav {
+    display: flex;
+    align-items: center;
+       
+}
+span {
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+.banner-text-link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    height: 40px;
+    background-color: #ff4e50;
+    display: block;
+    width: 280px;
+    margin: 0 auto;
+
+}
+
+/* section partners */
+
+.partners-title {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+    color: #333333;
+    padding: 0;
+    margin: 0;
+}
+.partners-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.partners-list-item {
+    width: 220px;
+    margin: auto;
+}
+.partners-list-item-image {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.partners-list-item-name {
+   text-align: center;
+   color: #333333;
+   font-weight: 700;
+   padding: 0;
+   margin: 0;
+   margin-bottom: 20px;
+}
+p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #666666;
+    text-align: center;
+}
+.partners-link {
+    display: block;
+    width: 280px;
+    height: 40px;
+    font-weight: 700;
+    color: #ff4e50;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    border: 2px solid #ff4e50;
+    border-radius: 25px;
+
+}
+.bradly, .lucas, .heather, .bradley {
+    display: block;
+    position: relative;
+}
+.bradly::after {
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/Shape 128.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ff4e50;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 135px;
+}
+.lucas::after {
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 135px;
+    background-image: url('../img/Shape 155.png');
+    background-color: #ffa507;
+}
+.heather::after {
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 135px;
+    background-image: url('../img/Shape 153.png');
+    background-color: #1cd7ad;
+}
+.bradley::after {
+    display: block;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 135px;
+    background-image: url('../img/Shape 170.png');
+    background-color: #4e73db;
+}
+
+
