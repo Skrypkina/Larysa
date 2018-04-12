@@ -129,12 +129,16 @@
     }
     .lucas {
         padding-top: 20px;
+        
     }
    .partners-list {
        margin-bottom: 40px;
    }
    main {
        padding-bottom: 72px;
+   }
+   .lucas::after {
+       top: 105px;
    }
  }
 
