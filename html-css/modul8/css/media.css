@@ -102,6 +102,8 @@
         justify-content: space-between;
         margin-bottom: 80px;
         padding-top: 30px;
+        height: 80px;
+       
     }
     .banner-text-title {
         width: 450px;
@@ -140,6 +142,21 @@
    .lucas::after {
        top: 105px;
    }
+   .menu-item a:hover {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 25px;
+   }
+   .menu-item a {
+       display: block;
+       padding: 10px;
+       border: 2px solid transparent;
+   }
+   .menu {
+       width: 180px;
+       
+   }
+   
  }
 
  

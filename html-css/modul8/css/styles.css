@@ -90,11 +90,11 @@ img {
     align-items: center;
        
 }
-span {
+/* span {
     border: 2px solid #ffffff;
     padding: 10px 20px;
     border-radius: 25px;
-}
+} */
 .banner-text-link {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
