@@ -1,0 +1,88 @@
+.services {
+  margin-bottom: 96px;
+}
+
+.section-paragraph {
+  @extend %paragraph;
+  font-size: 24px;
+  font-family: $second-font-stack;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.section-title {
+  @extend %paragraph;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 64px;
+  &::after {
+    @include pseudo;
+    width: 60px;
+    height: 3px;
+    background-color: $pseudo-color;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+.section-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services-list__title {
+  @extend %paragraph;
+}
+
+.section-text {
+  @extend %paragraph;
+  font-family: $paragraph-font-stack;
+  font-size: 15px;
+  line-height: 24px;
+  color: $paragraph-color;
+}
+
+.services-list__item {
+  display: block;
+  width: 380px;
+  padding-left: 80px;
+  position: relative;
+  &:not(:nth-last-child(-n+3)) {
+    margin-bottom: 100px;
+  }
+  &::before {
+    @include pseudo;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 24px;
+  }
+  &--clock::before {
+    background-image: url('../img/icons/icon-alarm.svg');
+  }
+  &--graph::before {
+    background-image: url('../img/icons/icon-graph.svg');
+  }
+  &--computer::before {
+    background-image: url('../img/icons/icon-computer.svg');
+  }
+  &--book::before {
+    background-image: url('../img/icons/icon-book.svg');
+  }
+  &--home::before {
+    background-image: url('../img/icons/icon-home.svg');
+  }
+  &--image::before {
+    background-image: url('../img/icons/icon-image.svg');
+  }
+}
+
+.services-list__title {
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}

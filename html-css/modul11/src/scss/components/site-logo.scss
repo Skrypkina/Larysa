@@ -1,0 +1,6 @@
+.site-logo {
+    @extend %link;
+    font-size: 30px;
+    color: $header-color;
+    font-weight: 700;
+}

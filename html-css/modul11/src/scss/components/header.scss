@@ -1,0 +1,35 @@
+.header {
+    margin-bottom: 48px;
+}
+
+.header-slogan {
+    @extend %paragraph;
+    font-size: 72px;
+    color: $header-color;
+    font-family: $second-font-stack;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header-title {
+    @extend %paragraph;
+    width: 840px;
+    font-size: 150px;
+    line-height: 140px;
+    color: $header-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 118px;
+}
+
+.download-button {
+    @extend %button;
+    background-color: transparent;
+    margin: auto;
+    width: 160px;
+    height: 40px;
+    border: 3px solid $header-color;
+    text-align: center;
+}

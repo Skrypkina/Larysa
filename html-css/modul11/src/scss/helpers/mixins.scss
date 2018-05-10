@@ -1,0 +1,10 @@
+@mixin pseudo ($display: block, $content: '') {
+    display: $display;
+    content: $content;
+}
+@mixin bg-image ($display: block, $repeat: no-repeat, $pos: center, $size: cover) {
+    display: $display;
+    background-repeat: $repeat;
+    background-position: $pos;
+    background-size: $size;
+}

@@ -1,0 +1,103 @@
+.team-paragraph {
+  @extend %paragraph;
+  display: block;
+  width: 980px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 94px;
+}
+.team {
+@extend %container;
+
+}
+.team-list {
+  @extend %list;
+  flex-basis: 1200px;
+}
+
+.team-list__item {
+  display: block;
+  position: relative;
+  &:hover .team-list__image {
+    transform: translate(-10px, -10px);
+  }
+  &:hover .team-list__overlay-first {
+    opacity: 1;
+  }
+  &:hover .team-list__overlay-second {
+    opacity: 1;
+    transform: translate(-10px, -10px);
+  }
+}
+
+.team-list__ocupation {
+  @extend %paragraph;
+  font-style: italic;
+  text-align: center;
+}
+
+.team-list__name {
+  @extend %paragraph;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.team-list__image {
+  margin-bottom: 28px;
+  transition: transform 0.2s linear;
+}
+
+.team-list__overlay-first {
+  display: block;
+  width: 380px;
+  height: 470px;
+  background: $overlay-first-color;
+  position: absolute;
+  opacity: 0;
+}
+
+.team-list__overlay-second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px;
+  height: 470px;
+  background: linear-gradient(to bottom, $overlay-second-top-gradient-color, $overlay-second-bottom-gradient-color);
+  position: absolute;
+  opacity: 0;
+  transition: opasity 0.2s linear, transform 0.2s linear;
+  z-index: 2;
+}
+
+.socials {
+  @extend %list;
+  display: flex;
+}
+
+socials__icons {
+  @extend %link;
+}
+
+.socials__item {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-color: $header-hover-color;
+  text-align: center;
+  padding-top: 15px;
+  &:not(:last-child) {
+    margin-right: 1px;
+  }
+  &:hover {
+    background-color: $pseudo-color;
+  }
+  &:hover .socials__image {
+    fill: $header-color;
+  }
+}
+
+.socials__image {
+  fill: $pseudo-color;
+}

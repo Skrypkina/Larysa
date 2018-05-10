@@ -1,0 +1,20 @@
+/*
+   Import partials below
+*/
+
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'normalize';
+@import 'helpers/placeholders';
+
+// components
+@import 'components/base';
+@import 'components/hidden';
+@import 'components/banner';
+@import 'components/page-nav';
+@import 'components/menu';
+@import 'components/site-logo';
+@import 'components/header';
+@import 'components/servises';
+@import 'components/team';
+@import 'components/footer'

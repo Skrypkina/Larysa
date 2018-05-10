@@ -1,0 +1,6 @@
+.banner {
+    @include bg-image;
+    min-height: 1000px;
+    background: linear-gradient(to bottom, $overlay-second-top-gradient-color, $overlay-second-bottom-gradient-color), url('../img/banner.png');
+    padding-top: 38px;
+} 

@@ -1,0 +1,7 @@
+.page-nav {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 176px;
+}       
