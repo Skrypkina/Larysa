@@ -6,21 +6,21 @@ const userInput = prompt('Enter the number of guests');
 const asNumber = Number(userInput);
 
 
-if (Number.isInteger(asNumber)) {
+if (Number.isInteger(asNumber) && asNumber > 0) {
 
-    if (asNumber <= taba && asNumber !== 0) {
+    if (asNumber <= taba) {
 
 
-        let goToTaba = confirm('There are free tours in Taba, Are you sure you want to go to Taba?');
-        if (goToTaba === true) {
+        const goToTaba = confirm('There are free tours in Taba, Are you sure you want to go to Taba?');
+        if (goToTaba) {
             alert('Have a nice trip to Taba!');
         } else {
-            let goToSharm = confirm('There are free tours in Sharm, Are you sure you want to go to Sharm?');
-            if (goToSharm === true) {
+            const goToSharm = confirm('There are free tours in Sharm, Are you sure you want to go to Sharm?');
+            if (goToSharm) {
                 alert('Have a nice trip to Sharm!');
             } else {
-                let goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
-                if (goToHurgada === true) {
+                const goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
+                if (goToHurgada) {
                     alert('Have a nice trip to Hurgada!');
                 } else {
                     alert('We are very sorry, come again');
@@ -28,21 +28,21 @@ if (Number.isInteger(asNumber)) {
             }
         }
 
-    } else if (asNumber <= sharm && asNumber !== 0) {
-        let goToSharm = confirm('There are free tours in Sharm, Are you sure you want to go to Sharm?');
-         if (goToSharm === true) {
+    } else if (asNumber <= sharm) {
+        const goToSharm = confirm('There are free tours in Sharm, Are you sure you want to go to Sharm?');
+         if (goToSharm) {
             alert('Have a nice trip to Sharm!');
         } else {
-            let goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
-            if (goToHurgada === true) {
+            const goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
+            if (goToHurgada) {
                 alert('Have a nice trip to Hurgada!');
             } else {
                 alert('We are very sorry, come again');
             }
         }
-    } else if (asNumber <= hurgada && asNumber !== 0) {
-        let goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
-        if (goToHurgada === true) {
+    } else if (asNumber <= hurgada ) {
+        const goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
+        if (goToHurgada) {
             alert('Have a nice trip to Hurgada!');
         } else {
             alert('We are very sorry, come again');
@@ -56,8 +56,10 @@ if (Number.isInteger(asNumber)) {
     } else if (asNumber === 0) {
         alert('Input Error');
     }
+
 } else if (Number.isNaN(asNumber)) {
     alert('Input Error');
 } else if (asNumber % 2 !== 0) {
     alert('Input Error');
 }
+
