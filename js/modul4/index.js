@@ -99,19 +99,23 @@ function Cashier(name, productsDatabase) {
     }
 
     this.onSuccess = function () {
-        if (this.changeAmount > 0) {
-            console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
-        }
-        if (this.changeAmount === 0) {
-            console.log(`Спасибо за покупку ваша сдача равна 0`);
-        }
+        // if (this.changeAmount > 0) {
+        //     console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
+        // }
+        // if (this.changeAmount === 0) {
+        //     console.log(`Спасибо за покупку ваша сдача равна 0`);
+        // }
+
+        console.log(`Спасибо за покупку, ваша сдача ${this.changeAmount}`);
         
     }
 
     this.onError = function () {
-        if (this.customerMoney < this.totalPrice) {
-            console.log('Очень жаль, вам не хватает денег на покупки');
-        }
+        // if (this.customerMoney < this.totalPrice) {
+        //     console.log('Очень жаль, вам не хватает денег на покупки');
+        // }
+        console.log('Очень жаль, вам не хватает денег на покупки');
+        // }
     }
     this.reset = function () {
         this.totalPrice = 0;

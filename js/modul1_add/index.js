@@ -6,9 +6,9 @@ const userInput = prompt('Enter the number of guests');
 const asNumber = Number(userInput);
 
 
-if (Number.isInteger(asNumber) && asNumber > 0) {
+if (Number.isInteger(asNumber)) {
 
-    if (asNumber <= taba) {
+    if (asNumber <= taba && asNumber !== 0) {
 
 
         const goToTaba = confirm('There are free tours in Taba, Are you sure you want to go to Taba?');
@@ -28,9 +28,9 @@ if (Number.isInteger(asNumber) && asNumber > 0) {
             }
         }
 
-    } else if (asNumber <= sharm) {
+    } else if (asNumber <= sharm && asNumber !== 0) {
         const goToSharm = confirm('There are free tours in Sharm, Are you sure you want to go to Sharm?');
-         if (goToSharm) {
+        if (goToSharm) {
             alert('Have a nice trip to Sharm!');
         } else {
             const goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
@@ -40,7 +40,7 @@ if (Number.isInteger(asNumber) && asNumber > 0) {
                 alert('We are very sorry, come again');
             }
         }
-    } else if (asNumber <= hurgada ) {
+    } else if (asNumber <= hurgada && asNumber !== 0) {
         const goToHurgada = confirm('There are free tours in Hurgada, Are you sure you want to go to Hurgada?');
         if (goToHurgada) {
             alert('Have a nice trip to Hurgada!');
@@ -48,18 +48,16 @@ if (Number.isInteger(asNumber) && asNumber > 0) {
             alert('We are very sorry, come again');
         }
 
-
-
-
+    
     } else if (asNumber > hurgada) {
         alert('We are very sorry here are not so many places in any group');
-    } else if (asNumber === 0) {
+    
+    
+  } else if (asNumber === 0) {
+        alert('Input Error');
+    } else if (Number.isNaN(asNumber)) {
+        alert('Input Error');
+    } else if (asNumber % 2 !== 0) {
         alert('Input Error');
     }
-
-} else if (Number.isNaN(asNumber)) {
-    alert('Input Error');
-} else if (asNumber % 2 !== 0) {
-    alert('Input Error');
 }
-
