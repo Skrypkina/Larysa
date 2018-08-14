@@ -18,7 +18,7 @@
 
 const root = document.querySelector('div');
 
-const result = createBoxes(3);
+const result = createBoxes(5);
 console.log(result);
 root.append(...result);
 
@@ -26,7 +26,7 @@ root.append(...result);
 function createBoxes(num) {
 
     const values = [];
-let dimensionPlus=0;
+   let dimensionPlus=0;
   for(let i = 0; i < num; i += 1) {
     const res = createDiv(dimensionPlus);
     dimensionPlus+=10;
@@ -45,20 +45,29 @@ function createDiv(dimensionPlus) {
    
    div.style.width = dimNum+"px";
    div.style.height = dimNum+"px";
-  
+   div.style.background = random_bg_color();
 
-    function random_bg_color() {
+    // function random_bg_color() {
+    //     const x = Math.floor(Math.random() * 256);
+    //     const y = Math.floor(Math.random() * 256);
+    //     const z = Math.floor(Math.random() * 256);
+    //     const bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    
+    //     div.style.background = bgColor;
+    //     }
+
+    //     random_bg_color();
+
+    return div;
+}
+
+   function random_bg_color() {
         const x = Math.floor(Math.random() * 256);
         const y = Math.floor(Math.random() * 256);
         const z = Math.floor(Math.random() * 256);
         const bgColor = "rgb(" + x + "," + y + "," + z + ")";
     
-        div.style.background = bgColor;
+        return bgColor;
         }
 
-        random_bg_color();
-
-    return div;
-}
-
-
+       

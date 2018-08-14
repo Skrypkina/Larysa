@@ -17,28 +17,57 @@
       
 //         <a class="button" href="#">Read more</a> -->
 
+const newPost = createPostCard();
 
-function createPostCard() {
+console.log(newPost);
 
-const image = document.createElement('img');
+function createImage() {
+  const image = document.createElement('img');
 image.classList.add('post__image');
 image.src = 'http://via.placeholder.com/400x150';
 image.alt = 'post image';
 
-const header = document.createElement('h2');
+return image;
+}
+
+
+function createHeader() {
+  const header = document.createElement('h2');
 header.classList.add('post__title');
 header.textContent = 'Lorem ipsum dolor';
 
-const paragraph = document.createElement('p');
-paragraph.classList.add('post__text');
-paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!';
+  return header;
+}
 
 
-const button = document.createElement('a');
-button.classList.add('button');
-button.href = '#';
-button.textContent = 'Read more';
+function createParagraph() {
+  const paragraph = document.createElement('p');
+  paragraph.classList.add('post__text');
+  paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!';
+  
+   return paragraph;
+}
 
+
+function createButton() {
+  const button = document.createElement('a');
+  button.classList.add('button');
+  button.href = '#';
+  button.textContent = 'Read more';
+   
+    return button;
+}
+
+
+function createPostCard() {
+  
+ const image = createImage();
+
+const header = createHeader();
+
+const paragraph = createParagraph();
+
+const button = createButton();
 
 const post = document.querySelector('.post');
 
@@ -49,6 +78,4 @@ return post;
 
 }
 
-const newPost = createPostCard();
 
-console.log(newPost);

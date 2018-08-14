@@ -13,13 +13,16 @@
 */
 
 const checked = document.querySelectorAll('input[checked]');
- 
+
 
 function getInputsData(array) {
-    let valueArray = [];
-    array.forEach(arr => valueArray.push(arr.value));
-    return valueArray;
-}
+
+    return Array.from(array).map(val => val.value);
+
+}  
+
 const value = getInputsData(checked);
 
 console.log(value);
+
+ 
