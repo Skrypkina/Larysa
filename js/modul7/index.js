@@ -42,26 +42,51 @@ const posts = [
   allPosts.append(...values);
 
 
-  function createPostCard({img, title, text, link}) {
-
+  function createImage(img) {
     const image = document.createElement('img');
-    image.classList.add('post__image');
-    image.src = img;
-    image.alt = 'post image';
-    
+  image.classList.add('post__image');
+  image.src = img;
+  image.alt = 'post image';
+  
+  return image;
+  }
+
+  function createHeader(title) {
     const header = document.createElement('h2');
-    header.classList.add('post__title');
-    header.textContent = title;
-    
+  header.classList.add('post__title');
+  header.textContent = title;
+  
+    return header;
+  }
+
+  function createParagraph(text) {
     const paragraph = document.createElement('p');
     paragraph.classList.add('post__text');
     paragraph.textContent = text;
     
-    
+     return paragraph;
+  }
+  
+  function createButton(link) {
     const button = document.createElement('a');
     button.classList.add('button');
     button.href = link;
     button.textContent = 'Read more';
+     
+      return button;
+  }
+
+
+  function createPostCard({img, title, text, link}) {
+
+    const image = createImage(img);
+
+    const header = createHeader(title);
+  
+    const paragraph = createParagraph(text);
+    
+    const button = createButton(link);
+    
     
     const post = document.querySelector('.post'); 
 
