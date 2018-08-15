@@ -76,7 +76,7 @@ const posts = [
       return button;
   }
 
-
+ 
   function createPostCard({img, title, text, link}) {
 
     const image = createImage(img);

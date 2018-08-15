@@ -21,9 +21,14 @@ const newPost = createPostCard();
 
 console.log(newPost);
 
-function createImage() {
-  const image = document.createElement('img');
-image.classList.add('post__image');
+function createElem(el, classList) {
+  const elem = document.createElement(el);
+  elem.classList.add(classList);
+  return elem;
+  }
+
+function createImage(el, classList) {
+const image = createElem('img', 'post_image');
 image.src = 'http://via.placeholder.com/400x150';
 image.alt = 'post image';
 
@@ -31,32 +36,30 @@ return image;
 }
 
 
-function createHeader() {
-  const header = document.createElement('h2');
-header.classList.add('post__title');
+function createHeader(el, classList) {
+const header = createElem('header', 'post_title');
 header.textContent = 'Lorem ipsum dolor';
 
   return header;
 }
 
 
-function createParagraph() {
-  const paragraph = document.createElement('p');
-  paragraph.classList.add('post__text');
+function createParagraph(el, classList) {
+  const paragraph = createElem('p', 'post__text');
   paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, nemo dignissimos ea temporibus voluptatem maiores maxime consequatur impedit nobis sunt similique voluptas accusamus consequuntur, qui modi nesciunt veritatis distinctio rem!';
   
    return paragraph;
 }
 
 
-function createButton() {
-  const button = document.createElement('a');
-  button.classList.add('button');
+function createButton(el, classList) {
+  const button = createElem('a', 'button');;
   button.href = '#';
   button.textContent = 'Read more';
    
     return button;
 }
+
 
 
 function createPostCard() {
@@ -68,6 +71,7 @@ const header = createHeader();
 const paragraph = createParagraph();
 
 const button = createButton();
+
 
 const post = document.querySelector('.post');
 
