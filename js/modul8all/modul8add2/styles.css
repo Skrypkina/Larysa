@@ -1,0 +1,32 @@
+body {
+    font-size: 24px;
+  }
+  
+  input, button {
+    font-size: inherit;
+  }
+  
+  .calc {
+    display: flex;
+    align-items: center;
+  }
+  
+  .calc button {
+    margin-right: 16px;
+    padding: 4px 32px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  input {
+    width: 100px;
+  }
+  span {
+    margin: 0 8px;
+    font-weight: 600;
+  }
+  
+  .result {
+    font-size: 64px;
+    font-weight: 400;
+  }
