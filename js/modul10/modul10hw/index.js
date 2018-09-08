@@ -107,7 +107,7 @@ function addUser(evt,name, age) {
      name = inputAddName.value;
      age = inputAddAge.value;
  
- fetch('https://test-users-api.herokuapp.com/users', {
+ fetch(url, {
   method: 'POST',
   body: JSON.stringify({ name: name, age: age}),
   headers: {
