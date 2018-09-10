@@ -41,136 +41,11 @@ const updateForm = document.querySelector('.update-user');
 const url = "https://test-users-api.herokuapp.com/users/";
 
 
-
-getBtn.addEventListener('click', getAllUsers);
-getByIdBtn.addEventListener('click',getUserById);
-addBtn.addEventListener('click', addUser);
-removeBtn.addEventListener('click', removeUser);
-updateBtn.addEventListener('click', updateUser);
-
-
-// ===============functions==========================
-
-function updateUser(evt,id, user) {
-evt.preventDefault();
-
-id = inputUpdateId.value;
-user = inputUpdateName.value;
-const link = url+id;
-
-
-fetch(link, {
-    method: 'PUT',
-    body: JSON.stringify({ name: user}),
-    headers: {
-        'Content-Type': 'application/json',
-    }
-  })
-  .then(response => {
-    if(response.ok) return response.json();
-    throw new Error(`Error while fetching: ${response.statusText}`)
-})
-  .then(data => {
-   console.log(data);
-   
-   if(user === '') return;
-   if(id !== data.data.id) return;
-   alert('name succesfully changed');
-   
-  })
-  .catch(error => {
-      
-    console.log('ERROR' + error)
+const api = {
+     
+    getAllUsers() {
     
-});
-
-
-updateForm.reset();
-}
-
-function removeUser(evt,id) {
-evt.preventDefault();
-
-id = inputRemove.value;
-console.log(id);
-
-fetch(url+id, {
-  method: 'DELETE'
-}).then((data) => alert(`${id} deleted!`) )
-.catch(error => console.log('ERROR' + error));
-
-
-}
-
-function addUser(evt,name, age) {
-    evt.preventDefault();
-     name = inputAddName.value;
-     age = inputAddAge.value;
- 
- fetch(url, {
-  method: 'POST',
-  body: JSON.stringify({ name: name, age: age}),
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  }
-})
-.then(response => {
-    if(response.ok) return response.json();
-    throw new Error(`Error while fetching: ${response.statusText}`)
-
-})
-  .then(data => {
-   console.log(data);
-   
-   if(data.status !== 201) {
-    alert('Input error!');
-    
-   }else {
-    alert(`${name} successfully added`);
-   
-   };
-   
-  })
-  .catch(error => {
-      console.log('ERROR' + error);
-    });
-
-addForm.reset();
-}
-
-
-
-function getUserById(evt) {
-    evt.preventDefault();
-     const value = inputId.value;
-   const link = url + value;
-   
-    fetch(link)
-.then(response => {
-    if(response.ok) return response.json();
-    throw new Error(`Error while fetching: ${response.statusText}`)
-})
-.then(data => {
-  console.log(data);
-    const inputName = data.data.name;
-    const inputId = data.data.id;
-    const inputAge = data.data.age;
-
-    const elem = createElem(inputId, inputName, inputAge);
-    result.insertAdjacentHTML('beforeend', elem);
-})
-.catch(error => console.log(error));
-
-
- form.reset();
-}
-
-
-function getAllUsers(evt) {
-evt.preventDefault();
-
-fetch(url)
+        fetch(url)
 .then(response => {
     if(response.ok) return response.json();
     throw new Error(`Error while fetching: ${response.statusText}`)
@@ -189,6 +64,161 @@ fetch(url)
 })
 .catch(error => console.log(error));
 
+     },
+
+    
+     getUserById(item) {
+
+        fetch(url+item)
+        .then(response => {
+            if(response.ok) return response.json();
+            throw new Error(`Error while fetching: ${response.statusText}`)
+        })
+        .then(data => {
+          console.log(data);
+            const inputName = data.data.name;
+            const inputId = data.data.id;
+            const inputAge = data.data.age;
+        
+            const elem = createElem(inputId, inputName, inputAge);
+            result.insertAdjacentHTML('beforeend', elem);
+        })
+        .catch(error => console.log(error));
+
+     },
+
+     addUser(userName, userAge) {
+
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({ name: userName, age: userAge}),
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            }
+          })
+          .then(response => {
+              if(response.ok) return response.json();
+              throw new Error(`Error while fetching: ${response.statusText}`)
+          
+          })
+            .then(data => {
+             console.log(data);
+             
+             if(data.status !== 201) {
+              alert('Input error!');
+              
+             }else {
+              alert(`${name} successfully added`);
+             
+             };
+             
+            })
+            .catch(error => {
+                console.log('ERROR' + error);
+              });
+
+
+
+     },
+
+     removeUser(number) {
+
+    fetch(url+number, {
+        method: 'DELETE'
+      }).then((data) => alert(`${number} deleted!`) )
+      .catch(error => console.log('ERROR' + error));
+ },
+
+ updateUser(userId, userName) {
+   
+    fetch(url+userId, {
+        method: 'PUT',
+        body: JSON.stringify({ name: userName}),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+      })
+      .then(response => {
+        if(response.ok) return response.json();
+        throw new Error(`Error while fetching: ${response.statusText}`)
+    })
+      .then(data => {
+       console.log(data);
+       
+       if(userName === '') return alert('Enter the name, please');
+       if(!userId) return;
+       alert('name succesfully changed');
+       
+      })
+      .catch(error => {
+          
+        console.log('ERROR' + error)
+        
+    });
+    
+    
+
+ }
+ 
+
+};
+
+
+getBtn.addEventListener('click', handleAllUsers);
+getByIdBtn.addEventListener('click',handleUserById);
+addBtn.addEventListener('click', handleAddingUser);
+removeBtn.addEventListener('click', handleRemoveUser);
+updateBtn.addEventListener('click', handleupdateUser);
+
+
+// ===============functions==========================
+
+function handleupdateUser(evt) {
+evt.preventDefault();
+
+const id = inputUpdateId.value;
+const user = inputUpdateName.value;
+
+api.updateUser(id, user);
+
+updateForm.reset();
+}
+
+function handleRemoveUser(evt) {
+evt.preventDefault();
+
+const id = inputRemove.value;
+console.log(id);
+
+api.removeUser(id);
+
+}
+
+function handleAddingUser(evt) {
+    evt.preventDefault();
+     const name = inputAddName.value;
+     const age = inputAddAge.value;
+
+api.addUser(name, age);
+addForm.reset();
+}
+
+
+
+function handleUserById(evt) {
+    evt.preventDefault();
+     const value = inputId.value;
+
+api.getUserById(value);
+ form.reset();
+}
+
+
+function handleAllUsers(evt) {
+evt.preventDefault();
+
+ api.getAllUsers();
 }
 
 function createElem(id, name, age) {
@@ -209,3 +239,5 @@ function createElem(id, name, age) {
     `
     
     }
+
+
