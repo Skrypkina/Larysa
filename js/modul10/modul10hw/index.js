@@ -45,23 +45,12 @@ const api = {
      
     getAllUsers() {
     
-        fetch(url)
+     return   fetch(url)
 .then(response => {
     if(response.ok) return response.json();
     throw new Error(`Error while fetching: ${response.statusText}`)
 })
-.then(data => {
-    data.data.forEach(res => {
-        const inputName = res.name;
-        const inputId = res.id;
-        const inputAge = res.age;
 
-        const elem = createElem(inputId, inputName, inputAge);
-        result.insertAdjacentHTML('beforeend', elem);
-
-    });
-
-})
 .catch(error => console.log(error));
 
      },
@@ -69,27 +58,19 @@ const api = {
     
      getUserById(item) {
 
-        fetch(url+item)
+      return  fetch(url+item)
         .then(response => {
             if(response.ok) return response.json();
             throw new Error(`Error while fetching: ${response.statusText}`)
         })
-        .then(data => {
-          console.log(data);
-            const inputName = data.data.name;
-            const inputId = data.data.id;
-            const inputAge = data.data.age;
-        
-            const elem = createElem(inputId, inputName, inputAge);
-            result.insertAdjacentHTML('beforeend', elem);
-        })
+       
         .catch(error => console.log(error));
 
      },
 
      addUser(userName, userAge) {
 
-        fetch(url, {
+       return fetch(url, {
             method: 'POST',
             body: JSON.stringify({ name: userName, age: userAge}),
             headers: {
@@ -102,18 +83,7 @@ const api = {
               throw new Error(`Error while fetching: ${response.statusText}`)
           
           })
-            .then(data => {
-             console.log(data);
-             
-             if(data.status !== 201) {
-              alert('Input error!');
-              
-             }else {
-              alert(`${name} successfully added`);
-             
-             };
-             
-            })
+            
             .catch(error => {
                 console.log('ERROR' + error);
               });
@@ -132,7 +102,7 @@ const api = {
 
  updateUser(userId, userName) {
    
-    fetch(url+userId, {
+    return fetch(url+userId, {
         method: 'PUT',
         body: JSON.stringify({ name: userName}),
         headers: {
@@ -143,14 +113,7 @@ const api = {
         if(response.ok) return response.json();
         throw new Error(`Error while fetching: ${response.statusText}`)
     })
-      .then(data => {
-       console.log(data);
-       
-       if(userName === '') return alert('Enter the name, please');
-       if(!userId) return;
-       alert('name succesfully changed');
-       
-      })
+    
       .catch(error => {
           
         console.log('ERROR' + error)
@@ -180,7 +143,14 @@ evt.preventDefault();
 const id = inputUpdateId.value;
 const user = inputUpdateName.value;
 
-api.updateUser(id, user);
+api.updateUser(id, user).then(data => {
+    console.log(data);
+    
+    if(user === '') return alert('Enter the name, please');
+    if(!id) return;
+    alert('name succesfully changed');
+    
+   })
 
 updateForm.reset();
 }
@@ -200,7 +170,18 @@ function handleAddingUser(evt) {
      const name = inputAddName.value;
      const age = inputAddAge.value;
 
-api.addUser(name, age);
+api.addUser(name, age).then(data => {
+    console.log(data);
+    
+    if(data.status !== 201) {
+     alert('Input error!');
+     
+    }else {
+     alert(`${name} successfully added`);
+    
+    };
+    
+   })
 addForm.reset();
 }
 
@@ -210,7 +191,15 @@ function handleUserById(evt) {
     evt.preventDefault();
      const value = inputId.value;
 
-api.getUserById(value);
+api.getUserById(value).then(data => {
+    console.log(data);
+      const inputName = data.data.name;
+      const inputId = data.data.id;
+      const inputAge = data.data.age;
+  
+      const elem = createElem(inputId, inputName, inputAge);
+      result.insertAdjacentHTML('beforeend', elem);
+  })
  form.reset();
 }
 
@@ -218,7 +207,19 @@ api.getUserById(value);
 function handleAllUsers(evt) {
 evt.preventDefault();
 
- api.getAllUsers();
+ api.getAllUsers().then(data => {
+    data.data.forEach(res => {
+        const inputName = res.name;
+        const inputId = res.id;
+        const inputAge = res.age;
+
+        const elem = createElem(inputId, inputName, inputAge);
+        result.insertAdjacentHTML('beforeend', elem);
+
+    });
+
+})
+
 }
 
 function createElem(id, name, age) {
