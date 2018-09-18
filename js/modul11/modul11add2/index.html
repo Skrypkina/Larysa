@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div class="post"></div>
+
+        <template id="post-list">
+        <h2 class="title">{{title}}</h2>
+        <p class="text">{{text}}</p>
+        <span class="fav-icon">{{#if isFav}}
+            <img src="https://image.flaticon.com/icons/svg/290/290413.svg" alt="star" width="50" height="50">
+            {{/if}}
+        </span>
+        </template>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
