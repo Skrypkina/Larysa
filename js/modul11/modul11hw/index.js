@@ -218,7 +218,7 @@ list[2][1].includes(String(laptop.release_date))) {
 
   
   function handleReset(evt) {
-    evt.preventDefault();
+    // evt.preventDefault();
   
     const card = document.querySelectorAll('.card');
 
@@ -227,5 +227,8 @@ list[2][1].includes(String(laptop.release_date))) {
       arr.remove();
 
      } );
+
+     location.reload();
+
   }
   
