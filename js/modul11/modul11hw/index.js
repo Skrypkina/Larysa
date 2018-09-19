@@ -157,11 +157,14 @@ const laptops = [
   const computerCard = document.querySelector('.computer-card');
   const source = document.querySelector('#computers').innerHTML.trim();
   const template = Handlebars.compile(source);
- 
 
+ 
 
   form.addEventListener('change', handleBtnClick);
   submitBtn.addEventListener('click', handleSubmit);
+  submitBtn.addEventListener('click', handleSubmit);
+  resetBtn.addEventListener('click', handleReset);
+  
 
   const filter = {
       size: [],
@@ -175,12 +178,15 @@ const laptops = [
    
     if(evt.target.name === 'size') {
         filter.size = filter.size.concat(evt.target.value);
+      
     }
     if(evt.target.name === 'color') {
         filter.color = filter.color.concat(evt.target.value);
+      
     }
     if(evt.target.name === 'release_date') {
         filter.releaseDate = filter.releaseDate.concat(evt.target.value);
+       
     }
       return filter;
       
@@ -188,11 +194,9 @@ const laptops = [
 
  
 
-  submitBtn.addEventListener('click', handleSubmit);
-
   function handleSubmit(evt, obj) {
     evt.preventDefault();
-   
+    
   laptops.forEach(laptop => {
 
 
@@ -201,16 +205,27 @@ const list = Object.entries(filter);
 if(list[0][1].includes(String(laptop.size)) && list[1][1].includes(laptop.color) &&
 list[2][1].includes(String(laptop.release_date))) {
 
-  
     const markup = template(laptop);
     computerCard.insertAdjacentHTML('afterbegin', markup);
-    
+   
 }
 
   });
 
   form.reset();
+ 
   }
 
+  
+  function handleReset(evt) {
+    evt.preventDefault();
+  
+    const card = document.querySelectorAll('.card');
 
+     const array = Array.from(card);
+     array.forEach(arr => {
+      arr.remove();
+
+     } );
+  }
   
