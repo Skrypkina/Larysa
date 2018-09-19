@@ -220,13 +220,13 @@ list[2][1].includes(String(laptop.release_date))) {
   function handleReset(evt) {
     // evt.preventDefault();
   
-    const card = document.querySelectorAll('.card');
+    // const card = document.querySelectorAll('.card');
 
-     const array = Array.from(card);
-     array.forEach(arr => {
-      arr.remove();
+    //  const array = Array.from(card);
+    //  array.forEach(arr => {
+    //   arr.remove();
 
-     } );
+    //  } );
 
      location.reload();
 
